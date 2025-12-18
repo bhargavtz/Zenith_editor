@@ -1,0 +1,196 @@
+/* Preview pane styles */
+
+.preview-header {
+    background-color: hsl(var(--card));
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.preview-content {
+    min-height: calc(100% - 41px);
+    background-color: hsl(var(--card));
+}
+
+/* Prose styling overrides */
+.prose {
+    --tw-prose-body: hsl(var(--foreground));
+    --tw-prose-headings: hsl(var(--foreground));
+    --tw-prose-lead: hsl(var(--muted-foreground));
+    --tw-prose-links: hsl(var(--primary));
+    --tw-prose-bold: hsl(var(--foreground));
+    --tw-prose-counters: hsl(var(--muted-foreground));
+    --tw-prose-bullets: hsl(var(--muted-foreground));
+    --tw-prose-hr: hsl(var(--border));
+    --tw-prose-quotes: hsl(var(--foreground));
+    --tw-prose-quote-borders: hsl(var(--primary));
+    --tw-prose-captions: hsl(var(--muted-foreground));
+    --tw-prose-code: hsl(var(--foreground));
+    --tw-prose-pre-code: hsl(var(--foreground));
+    --tw-prose-pre-bg: hsl(var(--muted));
+    --tw-prose-th-borders: hsl(var(--border));
+    --tw-prose-td-borders: hsl(var(--border));
+}
+
+/* Dark mode prose */
+.dark .prose {
+    --tw-prose-body: hsl(var(--foreground));
+    --tw-prose-headings: hsl(var(--foreground));
+    --tw-prose-lead: hsl(var(--muted-foreground));
+    --tw-prose-links: hsl(var(--primary));
+    --tw-prose-bold: hsl(var(--foreground));
+    --tw-prose-counters: hsl(var(--muted-foreground));
+    --tw-prose-bullets: hsl(var(--muted-foreground));
+    --tw-prose-hr: hsl(var(--border));
+    --tw-prose-quotes: hsl(var(--foreground));
+    --tw-prose-quote-borders: hsl(var(--primary));
+    --tw-prose-captions: hsl(var(--muted-foreground));
+    --tw-prose-code: hsl(var(--foreground));
+    --tw-prose-pre-code: #e5e7eb;
+    --tw-prose-pre-bg: hsl(var(--muted));
+    --tw-prose-th-borders: hsl(var(--border));
+    --tw-prose-td-borders: hsl(var(--border));
+}
+
+/* Headings */
+.prose h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    line-height: 1.2;
+    border-bottom: 1px solid hsl(var(--border));
+    padding-bottom: 0.3em;
+}
+
+.prose h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid hsl(var(--border) / 0.5);
+    padding-bottom: 0.3em;
+}
+
+.prose h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Links */
+.prose a {
+    color: hsl(var(--primary));
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.15s ease;
+}
+
+.prose a:hover {
+    text-decoration: underline;
+}
+
+/* Blockquotes */
+.prose blockquote {
+    border-left: 4px solid hsl(var(--primary));
+    padding-left: 1em;
+    font-style: italic;
+    color: hsl(var(--muted-foreground));
+    background-color: hsl(var(--muted) / 0.3);
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* Inline code */
+.prose code:not(pre code) {
+    background-color: hsl(var(--muted));
+    padding: 0.2em 0.4em;
+    border-radius: var(--radius);
+    font-size: 0.875em;
+    font-weight: 500;
+}
+
+/* Code blocks */
+.prose pre {
+    background-color: hsl(var(--muted));
+    border-radius: var(--radius);
+    padding: 1em;
+    overflow-x: auto;
+    margin: 1em 0;
+}
+
+.prose pre code {
+    background-color: transparent;
+    padding: 0;
+    font-size: 0.875em;
+    line-height: 1.6;
+}
+
+/* Tables */
+.prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+.prose th,
+.prose td {
+    border: 1px solid hsl(var(--border));
+    padding: 0.5em 1em;
+    text-align: left;
+}
+
+.prose th {
+    background-color: hsl(var(--muted));
+    font-weight: 600;
+}
+
+.prose tr:nth-child(even) {
+    background-color: hsl(var(--muted) / 0.3);
+}
+
+/* Task lists */
+.prose ul.contains-task-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.prose li.task-list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.prose li.task-list-item input[type="checkbox"] {
+    margin-top: 0.3em;
+    accent-color: hsl(var(--primary));
+}
+
+/* Images */
+.prose img {
+    max-width: 100%;
+    border-radius: var(--radius);
+    margin: 1em auto;
+    display: block;
+}
+
+/* Horizontal rules */
+.prose hr {
+    border: none;
+    border-top: 1px solid hsl(var(--border));
+    margin: 2em 0;
+}
+
+/* KaTeX math */
+.prose .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.5em 0;
+}
+
+/* Highlight.js overrides for dark theme */
+.dark .hljs {
+    background: transparent !important;
+}

@@ -1,0 +1,118 @@
+# Zenith Editor - Master Task List
+
+## Phase 1: Foundation (Core Editor)
+### Project Setup
+- [x] Initialize Vite + React + TypeScript project
+- [x] Configure Tailwind CSS
+- [x] Set up shadcn/ui styling (CSS variables)
+- [x] Configure ESLint + Prettier
+- [x] Create basic app shell with layout components
+
+### Editor Core
+- [x] Integrate CodeMirror 6 with markdown support
+- [x] Implement split-pane layout (editor + preview)
+- [x] Add basic toolbar with formatting buttons
+- [x] Create status bar (word count, line/col, save status)
+- [x] Implement theme system (light/dark/auto)
+- [x] Add Vim mode toggle
+
+### Markdown Processing
+- [x] Set up unified.js/remark/rehype pipeline
+- [x] Add GFM support (tables, task lists, etc.)
+- [x] Implement syntax highlighting for code blocks
+- [x] Add math rendering (KaTeX)
+- [ ] Configure synchronized scrolling
+
+### File Management
+- [x] Implement File System Access API integration
+- [ ] Add drag & drop file support
+- [/] Create auto-save functionality (IndexedDB via Dexie)
+- [x] Build recent files sidebar
+- [ ] Implement folder workspace mode
+
+---
+
+## Phase 2: AI Integration
+### AI Setup
+- [ ] Create AI service layer (Claude API integration)
+- [ ] Build prompt templates system
+- [ ] Implement slash command parser
+- [ ] Create AI settings panel (API key input)
+
+### AI Features
+- [ ] Continue writing command
+- [ ] Improve text command
+- [ ] Summarize command
+- [ ] Tone adjustment (casual/formal/technical)
+- [ ] Grammar/spelling fixes
+- [ ] Generate outline
+
+### AI UX
+- [ ] Build floating AI panel on text selection
+- [ ] Implement diff view for AI suggestions
+- [ ] Add accept/reject workflow
+- [ ] Create loading states and error handling
+- [ ] Context-aware suggestions
+
+---
+
+## Phase 3: Export System
+### Export Formats
+- [ ] HTML export (standalone, styled)
+- [ ] PDF export (with templates)
+- [ ] DOCX export
+- [ ] Plain markdown export
+
+### Export Features
+- [ ] Create 10+ export templates
+- [ ] Add custom CSS support for exports
+- [ ] Implement table of contents generation
+- [ ] Add page numbers/headers/footers for PDF
+
+### Sharing
+- [ ] Generate shareable preview links
+- [ ] Create embed code generator
+- [ ] QR code generation
+
+---
+
+## Phase 4: Advanced Features
+### Templates
+- [ ] Build template system
+- [ ] Create 12+ built-in templates
+- [ ] AI template generation
+
+### Version Control
+- [ ] Auto-version snapshots
+- [ ] Version history UI
+- [ ] Diff viewer between versions
+- [ ] Restore functionality
+
+### Multi-Document
+- [ ] Tab system for multiple documents
+- [ ] Quick switcher (Cmd+P)
+- [ ] Global search across documents
+- [ ] Backlinks and knowledge graph
+
+### Command Palette
+- [ ] Build command palette UI
+- [ ] Implement fuzzy search
+- [ ] Keyboard shortcuts system
+
+---
+
+## Phase 5: Cloud Sync (Optional)
+- [ ] Set up Supabase integration
+- [ ] Implement authentication (email, OAuth)
+- [ ] Build sync engine with conflict resolution
+- [ ] Settings and templates sync
+
+---
+
+## Polish & Testing
+- [ ] Add animations (Framer Motion)
+- [ ] Accessibility improvements
+- [ ] Responsive design refinements
+- [ ] Performance optimization
+- [ ] Unit tests (Vitest)
+- [ ] E2E tests (Playwright)

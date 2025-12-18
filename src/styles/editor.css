@@ -1,0 +1,192 @@
+/* Editor-specific styles */
+
+/* CodeMirror container */
+.cm-editor {
+    height: 100%;
+    font-size: inherit;
+}
+
+.cm-scroller {
+    overflow: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Smooth scrolling */
+.cm-scroller {
+    scroll-behavior: smooth;
+}
+
+/* Focus styles */
+.cm-editor.cm-focused {
+    outline: none;
+}
+
+/* Selection highlighting */
+.cm-selectionMatch {
+    background-color: hsl(var(--primary) / 0.15) !important;
+}
+
+/* Search highlighting */
+.cm-searchMatch {
+    background-color: hsl(var(--accent) / 0.3) !important;
+    border-radius: 2px;
+}
+
+.cm-searchMatch.cm-searchMatch-selected {
+    background-color: hsl(var(--accent) / 0.5) !important;
+}
+
+/* Fold gutter */
+.cm-foldGutter {
+    width: 16px;
+}
+
+.cm-foldGutter .cm-gutterElement {
+    cursor: pointer;
+    color: hsl(var(--muted-foreground));
+    transition: color 0.15s ease;
+}
+
+.cm-foldGutter .cm-gutterElement:hover {
+    color: hsl(var(--foreground));
+}
+
+/* Markdown-specific syntax highlighting */
+.cm-header {
+    color: hsl(var(--primary)) !important;
+    font-weight: 600;
+}
+
+.cm-header-1 {
+    font-size: 1.5em;
+}
+
+.cm-header-2 {
+    font-size: 1.3em;
+}
+
+.cm-header-3 {
+    font-size: 1.1em;
+}
+
+.cm-quote {
+    color: hsl(var(--muted-foreground)) !important;
+    font-style: italic;
+}
+
+.cm-link {
+    color: hsl(var(--accent)) !important;
+    text-decoration: underline;
+}
+
+.cm-url {
+    color: hsl(var(--accent) / 0.7) !important;
+}
+
+.cm-strong {
+    font-weight: 700;
+}
+
+.cm-em {
+    font-style: italic;
+}
+
+.cm-strikethrough {
+    text-decoration: line-through;
+}
+
+.cm-monospace {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    background-color: hsl(var(--muted));
+    border-radius: 3px;
+    padding: 0.1em 0.3em;
+}
+
+/* Code blocks */
+.cm-line.cm-activeLine .cm-monospace {
+    background-color: hsl(var(--muted) / 0.8);
+}
+
+/* Task list checkboxes */
+.cm-taskMarker {
+    color: hsl(var(--primary));
+}
+
+/* Horizontal rule */
+.cm-hr {
+    color: hsl(var(--border));
+}
+
+/* Lists */
+.cm-list {
+    color: hsl(var(--secondary));
+}
+
+/* Vim mode cursor */
+.cm-vim-panel {
+    background-color: hsl(var(--muted));
+    color: hsl(var(--foreground));
+    padding: 4px 8px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 12px;
+}
+
+/* Fat cursor for vim normal mode */
+.cm-fat-cursor {
+    background-color: hsl(var(--primary) / 0.5) !important;
+    border: none !important;
+}
+
+/* Autocomplete popup */
+.cm-tooltip-autocomplete {
+    background-color: hsl(var(--popover)) !important;
+    border: 1px solid hsl(var(--border)) !important;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.cm-tooltip-autocomplete ul li {
+    padding: 4px 8px;
+    color: hsl(var(--popover-foreground));
+}
+
+.cm-tooltip-autocomplete ul li[aria-selected] {
+    background-color: hsl(var(--primary) / 0.1);
+    color: hsl(var(--primary));
+}
+
+/* Diagnostic tooltips */
+.cm-tooltip {
+    background-color: hsl(var(--popover)) !important;
+    border: 1px solid hsl(var(--border)) !important;
+    border-radius: var(--radius);
+    color: hsl(var(--popover-foreground));
+}
+
+/* Panel */
+.cm-panels {
+    background-color: hsl(var(--muted));
+    border-top: 1px solid hsl(var(--border));
+}
+
+.cm-panel input {
+    background-color: hsl(var(--input));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    padding: 4px 8px;
+    color: hsl(var(--foreground));
+}
+
+.cm-panel button {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border: none;
+    border-radius: var(--radius);
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+
+.cm-panel button:hover {
+    opacity: 0.9;
+}
